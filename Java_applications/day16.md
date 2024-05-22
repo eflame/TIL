@@ -36,4 +36,9 @@ Arrays.stream(ar).forEach(num -> System.out.println(num1+1));
 - 몇 번이든 사용 가능하다
 
 3. 최종연산
+- 반환 타입이 Stream이 아니다.
+- 한 번만 사용 가능하다.
 
+# 스트림 특징
+1. Stream은 일회용이다. -> 재사용 불가
+2. Stream은 원본 데이터를 수정하지 않는다.
