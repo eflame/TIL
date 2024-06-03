@@ -9,41 +9,39 @@
 |2|VIP|
 |3|NORMAL|
 
-
-TBL_USER
-=======================================
-USER_ID(PK)   LOGIN_ID   GRADE_ID(FK)
-----------------------------------------------------------------
-1      A      1
-2      B      2
-
-# INNER JOIN
-
-TBL_GRADE G JOIN TBL_USER U
-ON G.GRADE_ID = U.GRADE_ID
-=====================================================
-GRADE_ID(PK)   NAME   USER_ID(PK)   LOGIN_ID   GRADE_ID(FK)
-------------------------------------------------------------------------------------------------
-1      VVIP    1      A      1
-2      VIP   2      B      2
+### TBL_USER
+|USER_ID(PK)|LOGIN_ID|GRADE_ID(FK)|
+|----|----|----|
+|1|A|1|
+|2|B|2|
 
 
-# OUTER JOIN
+## INNER JOIN
+  TBL_GRADE G JOIN TBL_USER U
+  
+  ON G.GRADE_ID = U.GRADE_ID
 
-TBL_GRADE G LEFT OUTER JOIN TBL_USER U
-ON G.GRADE_ID = U.GRADE_ID
-=====================================================
-GRADE_ID(PK)   NAME   USER_ID(PK)   LOGIN_ID   GRADE_ID(FK)
-------------------------------------------------------------------------------------------------
-1      		VVIP    1      		A      	1
-2      		VIP   	2     		B       2
-3      		NORMAL   NULL      	NULL    NULL
+|GRADE_ID(PK)|NAME|USER_ID(PK)|LOGIN_ID|GRADE_ID(FK)|
+|----|----|----|----|----|
+|1|VVIP|1|A|1|
+|2|VIP|2|B|2|
 
 
-# LEFT OUTER JOIN
+## OUTER JOIN
+  TBL_GRADE G LEFT OUTER JOIN TBL_USER U
+  
+  ON G.GRADE_ID = U.GRADE_ID
+  
+|GRADE_ID(PK)|NAME|USER_ID(PK)|LOGIN_ID|GRADE_ID(FK)|
+|----|----|----|----|----|
+|1|VVIP|1|A|1|
+|2|VIP|2|B|2|
+|3|NORMAL|NULL|NULL|NULL|
+
+## LEFT OUTER JOIN
 우선 왼쪽 테이블의 정보를 전부 가져온 뒤 ON조건 과 일치하는 행을 병합한다.
 
-# RIGHT OUTER JOIN
+## RIGHT OUTER JOIN
 우선 오른쪽 테이블의 정보를 전부 가져온 뒤 ON조건 과 일치하는 행을 병합한다.
 
 
