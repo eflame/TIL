@@ -46,6 +46,29 @@ syso > ctrl + space
 
 ## 실행
 ctrl + F11 <br><br>
+# 프로젝트 폴더 생성
+1. 단축키: ctrl + n
+2. Java Project 선택
+3. 프로젝트 이름 설정 후, 모듈 생성하지 않고 Finish(Enter) 입력
+
+# 패키지 생성
+1. 단축키: ctrl + n
+2. "pack" 입력 후 Package 선택
+3. 패키지 이름 설정 후 Enter 입력
+
+# 클래스 생성
+1. 단축키: ctrl + n
+2. "cla" 입력 후 Class 선택
+3. 클래스 이름(첫 글자는 대문자) 설정 후 Enter 입력
+
+# 메서드 생성
+클래스의 중괄호 {} 안에서 "main" 입력 후 ctrl + space 입력하여 자동 완성 후 Enter 입력
+
+# 출력 메서드 생성
+"syso" 입력 후 ctrl + space 입력하여 자동 완성 후 Enter 입력
+
+# 실행
+단축키: ctrl + F11
 
 ## 프로젝트(폴더)
 하나의 프로그램 단위로, 프로그램을 구성하는 모든 것들을 모아둔 폴더입니다.
