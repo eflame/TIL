@@ -107,6 +107,24 @@ TRUNCATE TABLE 테이블명;
 - NVL2(칼럼명, 'NULL이 아닐때의 값', 'NULL 일 때의 값')
 		NULL일 때와 아닐 때의 값을 각각 설정한다.
 
+### NULL 값
 
+- `NULL` 값의 정의: 데이터가 없음을 나타냄
+- `NULL` 값과 관련된 연산자 및 함수
+  - `IS NULL` 및 `IS NOT NULL`
+  - `COALESCE` 함수
+  - `NVL` 함수 (Oracle)
+
+```sql
+-- 예제: NULL 값의 처리
+SELECT column1, column2
+FROM table_name
+WHERE column1 IS NULL;
+
+SELECT COALESCE(column1, 'default_value') 
+FROM table_name;
+
+SELECT NVL(column1, 'default_value')
+FROM table_name;
 
 
