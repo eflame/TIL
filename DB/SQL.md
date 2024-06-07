@@ -1,53 +1,48 @@
-# 데이터베이스(DB, DataBase)
+1. 데이터베이스 및 DBMS 기본 개념
+데이터베이스(DB)
 
-- 여러 데이터를 모아 둔 공간
-- 데이터는 물리적인 파일로 저장되어 있으나, 직접 열어서 조회하고 수정하는 것이 아니라 DBMS에서 SQL이라는 언어를 통해 조회, 수정 등을 하게 된다.
+데이터베이스의 정의와 중요성
+데이터베이스가 필요한 이유
+DBMS와 RDBMS
 
-## DBMS(DataBase Management System)
+DBMS의 역할
+RDBMS와 그 종류 (마리아DB, Oracle, MySQL, PostgreSQL 등)
+2. SQL 기본 개념
+SQL 개요
 
-- 데이터베이스 관리 시스템
-- DB에 존재하는 데이터를 편하고 효율적으로 관리하는 환경을 제공해주는 프로그램
+SQL의 정의 및 용도
+SQL 문법과 기본 구조
+테이블 구조
 
-## RDBMS(Relational DataBase Management System)
+테이블의 정의
+행과 열의 개념
+3. 오라클 계정 및 권한 관리
+오라클 계정
 
-- 관계형 데이터베이스 관리 시스템
-- 관계란 데이터 간의 관계를 의미한다.
-- 데이터를 2차원의 테이블(표) 형태로 저장해 놓는 데이터베이스
+주요 오라클 계정 (sys, system, hr)
+계정 잠금 해제 및 비밀번호 설정
+권한 관리
 
-## RDBMS 종류
+sysdba와 sysoper 권한
+계정 권한 부여 및 회수
+4. SQL 명령어의 종류
+DDL (Data Definition Language)
 
-- 마리아DB, Oracle, MySQL, PostgreSQL 등
-  - **오라클**: 대기업 (유료), 교육용 오라클은 무료
-  - **마리아DB, MySQL**: 중소기업 (무료 또는 적은 비용)
+테이블 생성, 수정, 삭제
+DML (Data Manipulation Language)
 
-## SQL(Structured Query Language)
+CRUD 명령어 (SELECT, INSERT, UPDATE, DELETE)
+5. JOIN 연산자
+INNER JOIN
 
-- 구조화된 표준 쿼리 언어
-- DBMS의 데이터를 관리하기 위해 설계된 언어
-- 명령어를 SQL문, 쿼리문, 질의문 등으로 부르기도 한다.
+기본 개념 및 사용 예제
+OUTER JOIN
 
-## 테이블(Table)
+LEFT OUTER JOIN, RIGHT OUTER JOIN, FULL OUTER JOIN의 개념과 사용 예제
+6. DCL 및 TCL
+DCL (Data Control Language)
 
-- 행(row)과 열(column)으로 이루어진 2차원의 표
-  - **행(row)**: 가로줄, 듀플(tuple), 레코드(record), 인스턴스(instance)
-  - **열(column)**: 세로줄, 필드(field), 속성(attribute)
+권한 부여 (GRANT) 및 회수 (REVOKE)
+TCL (Transaction Control Language)
 
-## 오라클 계정
-
-- **sys**: Oracle DBMS 관리자 계정
-- **system**: Oracle DBMS 운영을 위한 관리자 계정
-- **hr**: 11g 버전에서 학습을 위한 계정으로 기본 제공됨 (기본적인 샘플 데이터가 들어있다.)
-
-## 권한
-
-- **sysdba**: 데이터베이스 생성 및 삭제 등 모든 권한을 의미 (sys가 갖는 권한)
-- **sysoper**: 데이터베이스 운영을 위한 권한 (system이 갖는 권한)
-
-```sql
--- hr 계정 잠금 해제하기
-1. cmd 창을 열기
-2. sqlplus > 엔터
-3. 계정: sys as sysdba, 비밀번호: 1234
-4. hr 계정 잠금 해제: alter user hr account unlock;
-5. hr 계정 비밀번호 설정: alter user hr identified by 1234;
-6. 확인하기: conn hr/1234;
+트랜잭션 관리 (COMMIT, ROLLBACK)
