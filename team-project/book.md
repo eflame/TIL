@@ -48,15 +48,14 @@
 - 쿠폰 발급
 - 쿠폰 사용
 - 쿠폰 목록
-
+  
 결제 서비스
-- 
 
 
 퍼블리싱 참고 사이트
 https://www.woodo.kr/mysearch
 
-도서 관련 API
+## 도서 관련 API
 - 알라딘 API
   https://blog.aladin.co.kr/openapi/popup/6695306
 
