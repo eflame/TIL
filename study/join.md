@@ -70,4 +70,20 @@ memberService.findMemberId("test", "1234");
 //t
 asserThat(memberId).isEqualTo(1L);
 
+## Controller
 
+```
+@GetMapping("join")
+public String join() {
+  return "member/join";
+}
+```
+
+```
+@PostMapping("join")
+public String join(MemberJoinDTO memberJoinDTO) {
+  memberService.addMember(memberJoinDTO);
+
+  return "member/login"
+}
+```
