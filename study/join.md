@@ -1,6 +1,6 @@
 ## mapper 쿼리 정의 및 단위 테스트
 MemberJoinDTO
-memberId, loginId, password, age, 
+memberId, loginId, password, name, age 
 
 mapper.xml > mapper.java > mapperTest.java 끝
 <br/>
