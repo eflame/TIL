@@ -116,7 +116,13 @@ public String login(String loginId, String password,
 ```
 
 
+## html typeleaf
+xmlns:th="thhp://www.thymleaf.org"
 
+``` thymleaf
+th:if=${session.memberId == null}"
+th:unless=${session.memberId == null}"
+```
 
 
 
