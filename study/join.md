@@ -5,9 +5,10 @@ memberId, loginId, password, name, age
 mapper.xml > mapper.java > mapperTest.java 끝
 <br/>
 insertMember, selectMemberId
-<br/>
-단건 Optional<Long> selectMemberId
 
+```
+단건 Optional<Long> selectMemberId
+```
 ----
 ```
 @SpringBootTest
