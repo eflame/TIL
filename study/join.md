@@ -9,10 +9,12 @@ insertMember, selectMemberId
 단건 Optional<Long> selectMemberId
 
 ----
+```
 @SpringBootTest
 @Transactional
 
 @Autowired MemberMapper memberMapper;
+```
 test > gwt 
 
 insertMember
@@ -23,13 +25,13 @@ assertThat()
 
 ## service
 MemberService.java
-
+```
 @Service
 @Transactional
 @RequiredArgsConstructor
 
 priavte final MemberMapper membberMapper;
-
+```
 ```JAVA
 addMember(MemberJoinDTO memberJoinDTO) {
   memberMapper.insertMember(memberJoinDTO);
